@@ -143,6 +143,29 @@ public class Token {
         }
     }
 
+    public boolean isCVInit() {
+        if(this.token().equals("static")) {
+            return true;
+        }
+        if(this.token().equals("field")) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isSDInit() {
+        if(this.token().equals("constructor")) {
+            return true;
+        }
+        if(this.token().equals("function")) {
+            return true;
+        }
+        if(this.token().equals("method")) {
+            return true;
+        }
+        return false;
+    }
+
     public String toString() {
         String retVal = "{";
         retVal += this.type;

@@ -104,11 +104,14 @@ public class Tokenizer {
                 }
                 else {
                     endChar = line.indexOf("//");
+                    line = line.substring(0, endChar);
                 }
             }
             else {
                 endChar = line.length();
+                line = line.substring(0, endChar);
             }
+            System.out.println(line);
             currToks = Tokenizer.lineToTokens(line, counter);
             for(int i = 0; i < currToks.size(); i++) {
                 result.add(currToks.get(i));
