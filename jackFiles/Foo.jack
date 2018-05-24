@@ -1,0 +1,16 @@
+if(a = 5) {
+	if(b = c) {
+		if(c = d) {
+			return 2;
+		}
+		else {
+			let a = c;
+		}
+	}
+	else {
+		let r = t;
+	}
+	return 1;
+}
+let a = 5;
+do Output.printInt(5);

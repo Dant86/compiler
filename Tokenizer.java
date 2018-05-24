@@ -97,6 +97,9 @@ public class Tokenizer {
                     line = line.substring(line.indexOf("*/") + 2, line.length());
                 }
             }
+            if(line.indexOf("*") != -1) {
+                line = "";
+            }
             // Parse single-line comments
             if(line.indexOf("//") != -1) {
                 if(line.indexOf("//") == 0) {
@@ -111,7 +114,6 @@ public class Tokenizer {
                 endChar = line.length();
                 line = line.substring(0, endChar);
             }
-            System.out.println(line);
             currToks = Tokenizer.lineToTokens(line, counter);
             for(int i = 0; i < currToks.size(); i++) {
                 result.add(currToks.get(i));
